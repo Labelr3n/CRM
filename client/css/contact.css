@@ -1,0 +1,145 @@
+.contact {
+  display: flex;
+  align-items: center;
+  width: 390px;
+  margin-bottom: 25px;
+}
+
+.contact__type {
+  position: relative;
+}
+
+.contact__name {
+  position: relative;
+  height: 37px;
+  z-index: 1;
+  max-width: 134px;
+  min-width: 134px;
+  padding: 10px 12px;
+  padding-right: 60px;
+  cursor: pointer;
+  border: 1px solid var(--color-grey-siutC8C5);
+  background-color: var(--color-mischkaE7E5);
+  color: var(--color-Mine-Shaft333);
+  transition: background-color .3s ease-in-out;
+}
+
+.contact__name:hover {
+  background-color: var(--color-grey-siutC8C5);
+  transition: background-color .3s ease-in-out;
+}
+
+.contact__name:active {
+  background-color: var(--color-mischkaE7E5);
+  transition: background-color .3s ease-in-out;
+}
+
+.contact__name::before {
+  content: '';
+  position: absolute;
+  right: 15px;
+  top: 13px;
+  width: 10px;
+  height: 10px;
+  background-image: url('../img/contactArrow.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: transform .3s ease-in-out;
+}
+
+.contact__list--active.contact__name::before {
+  transform: rotate(-180deg);
+  transition: transform .3s ease-in-out;
+}
+
+.contact__list {
+  z-index: 2;
+  position: absolute;
+  max-width: 134px;
+  min-width: 134px;
+  font-family: 'Open-Sans-Regular';
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--color-Mine-Shaft333);
+  top: 36px;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+  background-color: var(--color-athens-grayF4F3);
+  border: 1px solid var(--color-grey-siutC8C5);
+}
+
+.contact__list--active.contact__list--active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+}
+
+.contact__item {
+  cursor: pointer;
+  padding-top: 7px;
+  padding-bottom: 5px;
+  padding-left: 12px;
+  transition: background-color .3s ease-in-out;
+}
+
+.contact__item:hover {
+  background-color: var(--color-mischkaE7E5);
+  transition: background-color .3s ease-in-out;
+}
+
+.contact__input {
+  padding-left: 12px;
+  width: 100%;
+  height: 37px;
+  display: block;
+  border: 1px solid var(--color-grey-siutC8C5);
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+}
+
+.contact__delete {
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  align-self: stretch;
+  background-color: var(--color-mischkaE7E5);
+  border: 1px solid var(--color-grey-siutC8C5);
+  color: var(--color-whiteFFF);
+  transition: border-color .3s ease-in-out;
+}
+
+.contact__delete svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+  fill: var(--color-text-Silver-ChaliceB0B0);
+  transition: fill .3s ease-in-out;
+}
+
+.contact__delete:hover {
+  border-color: var(--color-burnt-siennaF06A);
+  transition: border-color .3s ease-in-out;
+}
+
+.contact__delete:hover svg {
+  fill: var(--color-burnt-siennaF06A);
+  transition: fill .3s ease-in-out;
+}
+
+.contact__delete:hover .contact-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+}
+
+.contact__delete .contact-tooltip {
+  min-width: 160px;
+  top: -35px;
+}
+

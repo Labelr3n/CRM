@@ -1,3 +1,3 @@
 # CRM
-Server: node index.js
-Client: LiveServer or server
+# Server: node index.js
+# Client: LiveServer or server
